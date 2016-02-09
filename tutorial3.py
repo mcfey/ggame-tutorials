@@ -1,11 +1,12 @@
 from ggame import App, RectangleAsset, ImageAsset, SoundAsset
 from ggame import LineStyle, Color, Sprite, Sound
 
-myapp = App()
-myapp.run()
 
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
+
+myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
+myapp.run()
 
 green = Color(0x00ff00, 1)
 black = Color(0, 1)
