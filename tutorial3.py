@@ -6,7 +6,6 @@ SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
-myapp.run()
 
 green = Color(0x00ff00, 1)
 black = Color(0, 1)
@@ -25,3 +24,11 @@ ball.go = True
 
 def reverse(b):
     b.dir *= -1
+def step():
+    if ball.go:
+        ball.x += ball.dir
+        if ball.x + ball.width > SCREEN_WIDTH or ball.x < 0:
+            ball.x -= ball.dir
+            reverse(ball)
+
+myapp.run(step)
