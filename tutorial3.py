@@ -37,6 +37,10 @@ def step():
             ball.x -= ball.dir
             reverse(ball)
 
+myapp.listenKeyEvent('keydown', 'space', spaceKey)
+myapp.listenKeyEvent('keydown', 'r', reverseKey)
+myapp.listenMouseEvent('click', mouseClick)
+
 # Handle the space key
 def spaceKey(event):
     ball.go = not ball.go
@@ -50,9 +54,6 @@ def mouseClick(event):
     ball.x = event.x
     ball.y = event.y
 
-myapp.listenKeyEvent('keydown', 'space', spaceKey)
-myapp.listenKeyEvent('keydown', 'r', reverseKey)
-myapp.listenMouseEvent('click', mouseClick)
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run(step)
