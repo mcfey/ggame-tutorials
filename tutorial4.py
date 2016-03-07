@@ -36,14 +36,15 @@ class SpaceShip(Sprite):
                 self.thrustframe = 1
         else:
             self.setImage(0)
-        
+      
+            
     def thrustOn(self, event):
         self.thrust = 1
     def thrustOff(self, event):
         self.thrust = 0
     
     def left(self, event):
-        self.rotation = 1
+        self.rotation
 
    
 
